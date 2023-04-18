@@ -1,3 +1,7 @@
+# Digital Classroom
+Using this application Teachers and students take class, study and interact with each other.<br>
+To use this app user need have their email.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
