@@ -27,11 +27,7 @@ const SignIn = () => {
         setFields({ ...fields, [name]: value })
     };
     const naviga = () => {
-        let i = 0;
-        while (i < 3) {
-            navigate('/course');
-            i += 1;
-        }
+        navigate('/course');
     }
     const disall = async () => {
         try {
@@ -56,7 +52,7 @@ const SignIn = () => {
                 if (m.u_password === password) {
                     console.log(semail)
                     dispatch({ type: 'add', payload: email })
-                    naviga();
+                    naviga()
                     setFields({ email: '', password: '' });
                 }
                 l = 0;

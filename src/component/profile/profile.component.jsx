@@ -72,6 +72,8 @@ const Profile = () => {
         <div className="profile">
             <div id='back' onClick={back}></div>
             <h1>Profile</h1>
+            {/* {console.log(profile.avater===undefined)} */}
+            {profile.avater?<img src={require(`../../resourse/imageonline/${profile.avater}.jpg`)} alt="profile pic" width={100}/>:<img src='../../resourse/imageonline/img10.jpg' alt="profile pic" />}
             <h2>Name : {profile.u_name}</h2>
             <p>Email : {profile.u_email}</p>
             <p>Role : {profile.u_role}</p>

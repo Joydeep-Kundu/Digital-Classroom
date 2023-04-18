@@ -1,6 +1,6 @@
 import { createStore } from "redux";
 
-const redu = (state = { sign: false, email: '', course: '' }, action) => {
+const redu = (state = { sign: false, email: '', course: '',assignment:'' }, action) => {
     if (action.type === 'add') {
         return { email: action.payload, sign: true }
     }
@@ -11,7 +11,10 @@ const redu = (state = { sign: false, email: '', course: '' }, action) => {
         return { sign: false, email: '', course: '' }
     }
 
-
+    if (action.type==='Sassignment'){
+        console.log(action.payload)
+        return{...state,assignment:action.payload}
+    }
     return state;
 }
 

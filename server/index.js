@@ -200,8 +200,64 @@ app.put('/changepassword/:id', async (req, res) => {
     } catch (err) {
         console.log(err)
     }
-})
+});
 
+app.get('/upload', async (req, res) => {
+    let { file } = req.body;
+    console.log(file)
+    try {
+
+    } catch (err) {
+        console.log(err);
+    }
+})
+app.post('/setassignment',async (req,res)=>{
+    console.log('setassignment req',req.body)
+    let {u_id,a_d,c_id,a_t,dis,due_D}=req.body;
+    const a_id=`${c_id}${Math.random()}`;
+    try {
+        const setAssignment=await pool.query("Insert into Assignment values($1,$2,$3,$4,$5,$6,$7)",[a_d,a_t,a_id,c_id,u_id,due_D,dis])
+        res.json(setAssignment.rows);
+    } catch (error) {
+        console.log(error)
+    }
+});
+app.get('/getassignment/:id',async (req,res)=>{
+    console.log('get assingment');
+    let { id } = req.params;
+    console.log(id)
+    try {
+        let getAssignment= await pool.query("Select * from assignment where c_id=$1",[id]);
+        res.json(getAssignment.rows);
+        // console.log(res.json(getAssignment.rows))
+    } catch (error) {
+        console.log(error)
+        
+    }
+    
+})
+app.get('/getsubmit/:id',async(req,res)=>{
+    let {id}=req.params;
+    console.log('get submit',id)
+    try {
+        let getSubmit=await pool.query(
+            "select * from assignment where a_id=$1",[id]
+        );
+        res.json(getSubmit.rows);
+    } catch (error) {
+        console.log(error)
+    }
+})
+app.post('/setassignsubmit',async(req,res)=>{
+    let {a}=req.body;
+    try {
+        let setAssignSubmit =await pool.query(
+            "insert into submit values",[a]
+        );
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 app.listen(5000, () => {
     console.log('server is listening to port 5000');

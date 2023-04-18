@@ -6,6 +6,7 @@ import ProfilePage from './route/profile-page/profile-page.component';
 import './App.css';
 import CoursePage from './route/course-page/course-page.componet';
 import RoomPage from './route/room-page/room-page.component';
+import Submit from './component/submit/submit.component';
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
         <Route path='/course' element={<CoursePage />} />
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/room' element={<RoomPage />} />
+        <Route path='/submit' element={<Submit/>}/>
       </Routes>
     </div>
   );

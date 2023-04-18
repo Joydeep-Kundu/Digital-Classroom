@@ -3,7 +3,7 @@ CREATE TABLE users(
     u_name VARCHAR(25),
     u_email VARCHAR(40) PRIMARY KEY,
     u_role VARCHAR(25),
-    u_password VARCHAR
+    u_password VARCHAR(20)
 );
 CREATE TABLE course(
     c_name VARCHAR(30),
@@ -21,6 +21,8 @@ CREATE TABLE assignment(
     a_T time,
     c_id VARCHAR,
     a_email VARCHAR,
+    due_D date,
+    dis VARCHAR,
     CONSTRAINT dk
     FOREIGN KEY (a_email)
     REFERENCES  users(u_email),
@@ -36,6 +38,7 @@ CREATE TABLE submit(
     s_email VARCHAR,
     s_d DATE,
     s_t TIME,
+    checkS boolean,
     CONSTRAINT sk
     FOREIGN KEY (A_id)
     REFERENCES assignment(A_id),

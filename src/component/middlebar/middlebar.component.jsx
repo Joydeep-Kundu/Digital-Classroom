@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Assignment from "../assignment/assignment.compont";
+import Assignment from "../assignment/assignment.component";
 import People from "../people/people.component";
 import Discusion from "../discussion/discussion.component";
 

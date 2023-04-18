@@ -13,7 +13,7 @@ import TeacherCardList from '../teacher card list/card-list.component';
 
 const form1 = {
     cname: '',
-    cdis: '',
+    cdis: ''
 }
 
 
