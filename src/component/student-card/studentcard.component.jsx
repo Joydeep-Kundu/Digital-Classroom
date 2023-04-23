@@ -1,7 +1,7 @@
 import './studentcard.styles.scss';
 
 
-const StudentCard = ({ student }) => {
+const StudentCard =({ student }) => {
     console.log(student)
     return (
         <div className='studentcard'>

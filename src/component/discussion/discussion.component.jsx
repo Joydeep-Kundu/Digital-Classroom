@@ -32,7 +32,7 @@ const Discusion = ({ room, user }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let today = new Date;
+        let today = new Date();
         let day = today.getDate();
         let month = today.getMonth();
         let year = today.getFullYear();

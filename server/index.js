@@ -249,16 +249,49 @@ app.get('/getsubmit/:id',async(req,res)=>{
     }
 })
 app.post('/setassignsubmit',async(req,res)=>{
-    let {a}=req.body;
+    let {A_id,submit,s_email,s_d,s_t}=req.body;
+    console.log(req.body)
     try {
         let setAssignSubmit =await pool.query(
-            "insert into submit values",[a]
+            "insert into submit values ($1,$2,$3,$4,$5,$6)",[A_id,submit,s_email,s_d,s_t,true]
         );
     } catch (error) {
         console.log(error)
     }
 })
+app.get('/getassignsubmit/:id/:id2',async (req,res)=>{
+    let id=req.params.id
+    let id2=req.params.id2
 
+    console.log('getassignsubmit',id,id2)
+
+    try{
+        let getAssignmentSubmit=await pool.query(
+            "select * from submit where a_id=$1 AND s_email=$2",[id2,id]
+        )
+        res.json(getAssignmentSubmit.rows)
+        console.log(getAssignmentSubmit.rows)
+    }
+    catch(error){
+        console.log(error)
+    }
+});
+
+app.get('/getassignsubmit1/:id',async (req,res)=>{
+    let {id}=req.params;
+    
+    console.log('getassignsubmit1',id)
+    try{
+        let getAssignmentSubmit1=await pool.query(
+            "select a_id,submit,s_email,s_d,s_t,u_name,avater from submit,users where a_id=$1 and s_email=u_email",[id]
+        )
+        res.json(getAssignmentSubmit1.rows)
+        console.log(getAssignmentSubmit1.rows)
+    }
+    catch(error){
+        console.log(error)
+    }
+});
 app.listen(5000, () => {
     console.log('server is listening to port 5000');
 })

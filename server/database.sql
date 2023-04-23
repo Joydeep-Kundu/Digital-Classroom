@@ -34,7 +34,7 @@ CREATE TABLE assignment(
 
 CREATE TABLE submit(
     A_id VARCHAR,
-    submit VARCHAR,
+    z VARCHAR,
     s_email VARCHAR,
     s_d DATE,
     s_t TIME,

@@ -1,6 +1,4 @@
 import './studentcardlist.component';
-
-
 import StudentCard from '../student-card/studentcard.component';
 
 const StudentCardList = ({ students }) => {
