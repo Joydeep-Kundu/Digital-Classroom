@@ -1,0 +1,22 @@
+.AssignmentCard {
+    margin: 2% 10%;
+    border-radius: 10px;
+    background-color: beige;
+    padding: 2% 10%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.AssignmentCard:hover {
+    transform: scale(1.02);
+}
+
+.dis {
+    display: none;
+}

@@ -4,12 +4,16 @@ const SubmitCard = ({props})=>{
 
     return(
         <div className='submitcard'>
+            <div>
+            <h3>{props.u_name}</h3>
+            <p>{props.s_email}</p>
+            </div>
+            <p className='subdis'>{props.submit}</p>
+            <div>
 
-            <h3>{props.s_email}</h3>
-            <p>{props.u_name}</p>
-            <p>{props.submit}</p>
             <p>{props.s_d.substring(0, 10)}</p>
-            <p>{props.s_t}</p>
+            <p>{props.s_t.substring(0,5)}</p>
+            </div>
         </div>
     )
 }

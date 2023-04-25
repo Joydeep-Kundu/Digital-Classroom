@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom";
-import "./assignment_card.list.scss"
+import './assignment_card.styles.scss'
 
 
 const AssignmentCard=({props})=>{
@@ -19,7 +19,10 @@ const AssignmentCard=({props})=>{
     return(
         <div className="AssignmentCard" onClick={assignmentData}>
             <h3>{props.assignment}</h3>
-            <span>{props.a_d}{typeof(props.a_id)}</span>
+            <div>
+                <p>{props.a_d.substring(0,10)}</p>
+                <p>Due data : {props.due_d.substring(0,10)}</p>
+            </div>
         </div>
     )
 }

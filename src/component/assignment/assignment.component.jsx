@@ -24,6 +24,7 @@ const Assignment = ({ user, room, other }) => {
             fetch(`http://localhost:5000/getassignment/${other.c_id}`)
             .then((res) => res.json())
             .then((data) => setAssignment(data))
+            .catch((error)=>console.log(error))
             console.log(assignment);
         } catch (error) {
             console.log(error)
@@ -60,20 +61,30 @@ const Assignment = ({ user, room, other }) => {
         fetch(`http://localhost:5000/getassignment/${other.c_id}`)
             .then((res) => res.json())
             .then((data) => setAssignment(data))
+            .catch((error)=>console.log(error))
             setForm(form2)
+            formDisplay()
         } catch (error) {
             console.log(error)
         }
     }
+    const formDisplay=()=>{
+        let form12=document.querySelector('#form12');
+        form12.classList.toggle('dip');
+    }
     return (
         <div className='assignment'>
-            assignment
+            <h2>Assignment</h2>
             {dis ? (<div>
+                <div className='assign' onClick={formDisplay}>
+                    Create Assignment
+                </div>
+            <div id='form12' className='dip' >
                 <form onSubmit={handleSubmit}>
                     <FormInput type="text" value={assignmentTytle}
                         name='assignmentTytle'
                         handleChange={handleChange}
-                        label='text'
+                        label='Assingment Title'
                         required
                     />
                     <FormInput type="text" value={discreption}
@@ -82,15 +93,20 @@ const Assignment = ({ user, room, other }) => {
                     label="Assigment Discription"
                     required
                     />
-                    <FormInput type="date" value={dueDate}
+                    {/* <FormInput type="date" value={dueDate}
                     name='dueDate'
                     handleChange={handleChange}
                     label="Due date"
                     required
-                    />          
+                    />      */}
+                    <input type="date" name="data" value={dueDate} 
+                        onChange={handleChange}
+                        required
+                    />   
+                    <br/>  
                     <CustomButton type='submit'>Post</CustomButton>
                 </form>
-            </div>) : null}
+            </div></div>) : null}
             <AssignmentCardList props={assignment}/>
         </div>
     )

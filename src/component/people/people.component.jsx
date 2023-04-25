@@ -23,8 +23,10 @@ const People = ({ room, other }) => {
             <div className='teacher'>
             {console.log(peoples)}
             {other.avater?<img src={require(`../../resourse/imageonline/${other.avater}.jpg`)} alt="profile pic" width={100}/>:<img src='../../resourse/imageonline/img10.jpg' alt="profile pic1" />}
-                <h3>{other.u_name}</h3>
+            <div>
+            <h3>{other.u_name}</h3>
                 <span>{other.owner_e}</span>
+            </div>
             </div>
             <div>
                 <h3>Student</h3>

@@ -4,4 +4,7 @@
     border-radius: 20px;
     margin: 10px 0;
     border: 1px black solid;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-row: 1fr;
 }

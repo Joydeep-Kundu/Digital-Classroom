@@ -85,11 +85,10 @@ const Submit=()=>{
 
 
     return(
-        <div className='Submit'>
-            11111111111111111111111111111111
-            <div id='sumitHeader'>
-                
-            adffffff{submit.dis} {submit.due_d}
+        <div className='submit'>
+            <div id='submitheader'>
+                <h1>{submit.assignment}</h1>
+                <p>{submit.dis}</p>
             </div>
             {rendt?(assign?
 
