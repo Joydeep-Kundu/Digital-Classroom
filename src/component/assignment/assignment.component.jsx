@@ -99,10 +99,12 @@ const Assignment = ({ user, room, other }) => {
                     label="Due date"
                     required
                     />      */}
-                    <input type="date" name="data" value={dueDate} 
+                    <input type="date" name="dueDate" value={dueDate} 
                         onChange={handleChange}
                         required
-                    />   
+                    /> 
+                    {/* <input type='textarea' width='12%' height='12%'/> */}
+                      
                     <br/>  
                     <CustomButton type='submit'>Post</CustomButton>
                 </form>

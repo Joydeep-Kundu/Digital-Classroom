@@ -21,6 +21,17 @@ app.post("/signup", async (req, res) => {
         console.error(err.message);
     }
 });
+app.put('/avater',async(req,res)=>{
+    try {
+        const {email,av}=req.body;
+        const avater= await pool.query("update users set avater=$1 where u_email=$2",[av,email])
+        res.json(avater.rows)
+        console.log('avater set',av,email)
+    } catch (error) {
+        console.log(error.message)
+
+    }
+})
 
 //get all
 app.get("/disall", async (req, res) => {
@@ -170,6 +181,17 @@ app.get('/getpeoplestudent/:id', async (req, res) => {
         console.log('get people student req')
     } catch (err) {
         console.log(err)
+    }
+})
+app.delete('/deletestudent', async(req,res)=>{
+    let {cid,uemail}=req.body;
+    try {
+        const deleteStudent=await pool.query(
+            "DELETE FROM joins WHERE c_id=$1 and u_email=$2",[cid,uemail]
+        )
+        console.log('deleteStudent',uemail,cid)
+    } catch (error) {
+        console.log(error.message)
     }
 })
 app.delete('/deletecomment', async (req, res) => {

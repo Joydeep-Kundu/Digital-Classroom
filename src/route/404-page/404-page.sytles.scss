@@ -1,13 +1,24 @@
 .page404 {
     padding: 0 35%;
     color: whitesmoke;
-
-    h1 {
-        font-size: 20em;
-        margin: 0;
-    }
+    background: url(../../resourse/icon/0_uqbx_RV-7Vzz1Yc8.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 50vw;
+    height: 50vh;
+    // h1 {
+    //     font-size: 20em;
+    //     margin: 0;
+    // }
 
     h3 {
+        width: 8em;
+        height: 1.9em;
+        top: 39.5%;
+        left: 46%;
+        border: solid rgb(255, 255, 255) 2px;
+        border-radius: 20px;
+        position: absolute;
         cursor: pointer;
     }
 

@@ -5,6 +5,25 @@
     margin: 0 20%;
     margin-top: 5%;
 
+    #submitBody {
+        padding: 2%;
+
+        label {
+            font-size: 2em;
+        }
+
+        textarea {
+            display: block;
+            margin: 2em 0;
+        }
+    }
+
+    .submitted {
+        color: rgb(38, 39, 40);
+        padding-left: 41.3%;
+        font-size: 2.2em;
+    }
+
     #submitheader {
         h1 {
             margin: 10px 10px;

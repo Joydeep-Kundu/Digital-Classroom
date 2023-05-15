@@ -94,15 +94,16 @@ const Submit=()=>{
 
                 (<div id='submitBody'>
                     <form action="" onSubmit={handleSubmit}>
-
-                        <FormInput type='text' name='dis' value={dis}
-                        handleChange={handleChange}
-                        label='enter'
+                        <label htmlFor="tarea">Enter</label>
+                        <textarea id='tarea' type='text' name='dis' value={dis}
+                        onChange={handleChange}
                         required
+                        rows='4'
+                        cols='120'
                         />
                         <CustomButton>Submit</CustomButton>
                     </form>
-                </div>):(<div>Submitted</div>)
+                </div>):(<div className='submitted'>Submitted</div>)
             ) :(<SubmitCardList props={checkSubmit}/>)
 
             }

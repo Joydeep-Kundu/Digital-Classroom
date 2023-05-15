@@ -1,0 +1,28 @@
+.avater {
+    h1 {
+        color: #fff;
+        size: 3em;
+    }
+
+    .img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background: rgba(0, 0, 0, 0.377);
+        border-radius: 10px;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-bottom: 2%;
+
+        img {
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: white;
+            margin-bottom: 3em;
+            transition: 0.9 step-end;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+}

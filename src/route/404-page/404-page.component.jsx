@@ -8,8 +8,8 @@ const Page404=()=>{
     }
     return(
         <div className='page404'>
-            <h1>404</h1>
-            <h3 onClick={sign}>sign in or sign up</h3>
+            {/* <h1>404</h1> */}
+            <h3 onClick={sign}></h3>
         </div>
     )
 }

@@ -1,33 +1,48 @@
-.profile {
-    position: relative;
-    top: 180px;
-    margin: 0 30%;
-    min-height: 35vh;
-    background-color: aliceblue;
-    text-align: center;
-    padding: 30px 30px;
-    border-radius: 20px;
-
-    button {
-        display: inline-block;
-    }
-
-    #sign-out {
-        color: black;
-        margin: 20px 0;
-        padding: 10px 65px;
-        border-radius: 0;
-        border: 1px solid black;
-        font-size: 1.5em;
-        font-weight: 600;
-        background: white;
-
-        &:hover {
-            color: white;
-            background: black;
+.profile-container {
+    .profile {
+        img {
+            cursor: pointer;
         }
+
+        // display: none;
+        position: relative;
+        top: 180px;
+        margin: 0 30%;
+        min-height: 35vh;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 30px 30px;
+        border-radius: 20px;
+
+        button {
+            display: inline-block;
+        }
+
+        #sign-out {
+            color: black;
+            margin: 20px 0;
+            padding: 10px 65px;
+            border-radius: 0;
+            border: 1px solid black;
+            font-size: 1.5em;
+            font-weight: 600;
+            background: white;
+
+            &:hover {
+                color: white;
+                background: black;
+            }
+        }
+
     }
 
+    .avater-container {
+        margin: 10%;
+    }
+}
+
+.sda {
+    display: none;
 }
 
 #cnfp {
@@ -42,6 +57,20 @@
     position: absolute;
     left: 10px;
     top: 10px;
+    display: inline-block;
+    background: url("../233-2338164_back-transparent-background-back-icon-png-png-download.png");
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#avback {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    left: 20px;
+    top: 20px;
     display: inline-block;
     background: url("../233-2338164_back-transparent-background-back-icon-png-png-download.png");
     width: 40px;

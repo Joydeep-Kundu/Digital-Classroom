@@ -7,4 +7,16 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-row: 1fr;
+
+    #deleteIcon {
+        // background: url("../233-2338164_back-transparent-background-back-icon-png-png-download.png");
+        background: url("../../resourse/icon/icons8-delete.gif");
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        background-size: cover;
+        position: relative;
+        left: 630px;
+        top: -90px;
+    }
 }

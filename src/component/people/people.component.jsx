@@ -7,13 +7,14 @@ import './people.styles.scss';
 
 const People = ({ room, other }) => {
     //state
+    const [peoplerend,setPeoplerend]=useState(true);
     const [peoples, setpeoples] = useState([]);
     //effect
     useEffect(async() => {
         await fetch(`http://localhost:5000/getpeoplestudent/${room}`)
             .then((res) => res.json())
             .then((data) => setpeoples(data))
-    }, [])
+    }, [peoplerend])
     console.log(room)
     console.log(peoples)
 
@@ -30,7 +31,7 @@ const People = ({ room, other }) => {
             </div>
             <div>
                 <h3>Student</h3>
-                <StudentCardList students={peoples} />
+                <StudentCardList students={peoples} srend={setPeoplerend} rend={peoplerend} />
             </div>
         </div>
     )
