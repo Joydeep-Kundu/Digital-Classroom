@@ -9,8 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 import CustomButton from "../../component/custom-button/custom-button.component";
 import Header from "../../component/header/header.component";
 import { CardList } from '../card-list/card-list.component';
-import TeacherCardList from '../teacher card list/card-list.component';
-
+// import TeacherCardList from '../course-cardlist/course-card-list.component';
+import CourseCardList from '../course-cardlist/course-card-list.component';
 const form1 = {
     cname: '',
     cdis: ''
@@ -187,7 +187,7 @@ const Course = () => {
 
                 </div>
                 <div>
-                    <TeacherCardList data={courses} user={uemail} />
+                    <CourseCardList data={courses} user={uemail} />
                     <CardList data={course1} user={uemail} />
                 </div>
             </div >

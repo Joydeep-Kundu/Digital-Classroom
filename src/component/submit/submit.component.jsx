@@ -71,12 +71,17 @@ const Submit=()=>{
                     body:JSON.stringify(body)
                 }
             )
+
             console.log(res)
             setAssign(false)
         } catch (error) {
             console.log(error)
         }
         e.preventDefault();
+        fetch(`http://localhost:5000/getassignsubmit/${user}/${submitData}`)
+        .then((res)=>res.json())
+        .then((data)=>setAssignSubmit(data))
+        .catch((error)=>console.log(error))
     }
 
     const handleChange=(e)=>{
@@ -103,7 +108,7 @@ const Submit=()=>{
                         />
                         <CustomButton>Submit</CustomButton>
                     </form>
-                </div>):(<div className='submitted'>Submitted</div>)
+                </div>):(<div><h4>{assignSubmit.length?(assignSubmit[0].submit):null}</h4><div className='submitted'>Submitted</div></div>)
             ) :(<SubmitCardList props={checkSubmit}/>)
 
             }

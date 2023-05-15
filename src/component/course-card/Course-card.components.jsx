@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import './card.style.scss';
+import './Course-card.style.scss'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const TeacherCard = (props) => {
+const CourseCard = (props) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const dis = useSelector((state) => state.course)
@@ -26,4 +26,4 @@ const TeacherCard = (props) => {
 
     )
 }
-export default TeacherCard;
+export default CourseCard;

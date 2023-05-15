@@ -249,7 +249,7 @@ app.get('/getassignment/:id',async (req,res)=>{
     let { id } = req.params;
     console.log(id)
     try {
-        let getAssignment= await pool.query("Select * from assignment where c_id=$1",[id]);
+        let getAssignment= await pool.query("Select * from assignment where c_id=$1 order by a_d desc",[id]);
         res.json(getAssignment.rows);
         // console.log(res.json(getAssignment.rows))
     } catch (error) {

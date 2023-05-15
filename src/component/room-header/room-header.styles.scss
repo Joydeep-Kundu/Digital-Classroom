@@ -2,11 +2,12 @@
     // background: #84d2f6;
     font-family: 'Exo', sans-serif;
 
-    background: linear-gradient(45deg, rgb(246, 148, 233), rgb(217, 213, 20), rgb(123, 232, 232));
+    background: linear-gradient(45deg, #495057, #6c757d);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    // background-color: gray;
     overflow: hidden;
 
     @keyframes gradient {

@@ -11,8 +11,8 @@ const SideBarLeft = () => {
 
     const clickspan = () => {
         disclink.style.backgroundColor = '#dfdddd';
-        assignlink.style.backgroundColor = '#6c6a6a';
-        peoplelink.style.backgroundColor = '#6c6a6a';
+        assignlink.style.backgroundColor = '#6c757d';
+        peoplelink.style.backgroundColor = '#6c757d';
         disc.style.display = 'block';
         peop.style.display = 'none';
         assign.style.display = 'none';
@@ -20,16 +20,16 @@ const SideBarLeft = () => {
     }
     const clickspan2 = () => {
         peoplelink.style.backgroundColor = '#dfdddd';
-        assignlink.style.backgroundColor = '#6c6a6a';
-        disclink.style.backgroundColor = '#6c6a6a';
+        assignlink.style.backgroundColor = '#6c757d';
+        disclink.style.backgroundColor = '#6c757d';
         disc.style.display = 'none';
         assign.style.display = 'none';
         peop.style.display = 'block';
     }
     const clickspan3 = () => {
         assignlink.style.backgroundColor = '#dfdddd';
-        peoplelink.style.backgroundColor = '#6c6a6a';
-        disclink.style.backgroundColor = '#6c6a6a';
+        peoplelink.style.backgroundColor = '#6c757d';
+        disclink.style.backgroundColor = '#6c757d';
         assign.style.display = 'block';
         disc.style.display = 'none';
         peop.style.display = 'none';

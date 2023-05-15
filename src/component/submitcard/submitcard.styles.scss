@@ -2,22 +2,24 @@
     display: flex;
     flex-direction: column;
     margin: 5% 4%;
-    background: rgb(138, 132, 132);
+    background: #adb5bd;
     padding: 1% 2%;
     border-radius: 10px;
-    border: 2px solid rgb(9, 10, 10);
+    // border: 2px solid rgb(9, 10, 10);
     cursor: pointer;
     transform: translateZ(0);
     transition: transform 0.2s ease-in;
 
     p {
         margin: .5em;
+        padding: auto;
+
     }
 
     .subdis {
         padding: 1.3em 0.5em;
         border-radius: 2px;
-        background-color: rgb(217, 220, 225);
+        background-color: #f8f9fa;
     }
 
     div {
